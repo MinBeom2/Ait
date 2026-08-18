@@ -29,6 +29,7 @@ public class NotificationEventListener {
     @Transactional(propagation = Propagation.REQUIRES_NEW) // 독립적인 트랜잭션 사용
     public void handleNotification(NotificationEvent event) {
         try {
+            Thread.sleep(500);
             // 프록시 객체만 가져와서 DB 쿼리 최소화 (getReferenceById)
             User receiver = userRepository.getReferenceById(event.receiverId());
 

@@ -25,7 +25,7 @@ spring:
       max-request-size: 200MB
 
   datasource:
-    url: jdbc:mysql://localhost:3307/${MYSQL_DATABASE}?sslMode=DISABLED&allowPublicKeyRetrieval=true&connectionTimeZone=Asia/Seoul&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3307/${MYSQL_DATABASE}?rewriteBatchedStatements=true&sslMode=DISABLED&allowPublicKeyRetrieval=true&connectionTimeZone=Asia/Seoul&characterEncoding=UTF-8
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${MYSQL_USER}
     password: ${MYSQL_PASSWORD}
